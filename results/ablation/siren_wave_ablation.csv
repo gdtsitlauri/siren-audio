@@ -1,0 +1,5 @@
+variant,seed,metric,value,notes
+full,42,placeholder,0.0,placeholder
+no_masking,42,placeholder,0.0,placeholder
+no_blending,42,placeholder,0.0,placeholder
+no_detail_shaping,42,placeholder,0.0,placeholder

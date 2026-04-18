@@ -1,0 +1,10 @@
+dataset:
+  name: asvspoof2019
+  split: dev
+  protocol_required: true
+benchmark:
+  target_sample_rate: 16000
+  output_dir: results/detection_benchmarks/asvspoof2019_dev
+  metrics:
+    - auc
+    - eer

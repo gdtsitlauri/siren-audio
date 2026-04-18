@@ -1,0 +1,13 @@
+seed,variant,risk_score,blocked
+42,full,0.3425916569500156,False
+42,no_masking,0.3559593930909758,False
+42,no_blending,0.38923899934407297,False
+42,no_detail_shaping,0.3463632555882606,False
+43,full,0.3419683205773892,False
+43,no_masking,0.35536168221492864,False
+43,no_blending,0.38870861344492047,False
+43,no_detail_shaping,0.34572798297639995,False
+44,full,0.34242577982779665,False
+44,no_masking,0.3558544720278408,False
+44,no_blending,0.3882398920959096,False
+44,no_detail_shaping,0.34623721846362243,False

@@ -1,0 +1,6 @@
+path,label,dataset,split,speaker_id
+data/librispeech/LibriSpeech/dev-clean/1272/128104/1272-128104-0000.flac,authentic,librispeech,dev,1272
+data/librispeech/LibriSpeech/dev-clean/1272/128104/1272-128104-0001.flac,authentic,librispeech,dev,1272
+data/librispeech/LibriSpeech/dev-clean/1272/128104/1272-128104-0002.flac,authentic,librispeech,dev,1272
+data/librispeech/LibriSpeech/dev-clean/1272/128104/1272-128104-0003.flac,authentic,librispeech,dev,1272
+data/librispeech/LibriSpeech/dev-clean/1272/128104/1272-128104-0004.flac,authentic,librispeech,dev,1272

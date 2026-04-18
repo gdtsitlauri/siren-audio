@@ -1,0 +1,6 @@
+{
+  "experiment_summary_path": "results/research_bundle/experiments/experiment_summary.json",
+  "ablation_summary_path": "results/research_bundle/ablation/siren_wave_ablation_summary.json",
+  "experiment_table_path": "results/research_bundle/paper_tables/synthetic_experiments.tex",
+  "ablation_table_path": "results/research_bundle/paper_tables/ablation.tex"
+}

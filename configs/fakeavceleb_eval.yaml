@@ -1,0 +1,10 @@
+dataset:
+  name: fakeavceleb
+  split: eval
+  protocol_required: false
+benchmark:
+  target_sample_rate: 16000
+  output_dir: results/detection_benchmarks/fakeavceleb_eval
+  metrics:
+    - auc
+    - eer

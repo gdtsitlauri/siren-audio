@@ -1,0 +1,10 @@
+dataset:
+  name: librispeech
+  split: test
+  protocol_required: false
+benchmark:
+  target_sample_rate: 16000
+  output_dir: results/detection_benchmarks/librispeech_baseline
+  metrics:
+    - auc
+    - eer

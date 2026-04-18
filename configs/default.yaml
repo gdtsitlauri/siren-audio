@@ -1,0 +1,11 @@
+runtime:
+  sample_rate: 16000
+  device: auto
+  max_vram_gb: 3.5
+  realtime_chunk_ms: 20
+  seed: 42
+
+attack:
+  stealth: 0.8
+  strength: 0.25
+  universal: false

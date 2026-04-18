@@ -1,0 +1,18 @@
+runtime:
+  sample_rate: 16000
+  device: auto
+  max_vram_gb: 3.5
+  realtime_chunk_ms: 10
+  seed: 42
+
+attack:
+  stealth: 0.90
+  strength: 0.12
+  universal: false
+
+experiment:
+  seeds: [42, 43, 44]
+  sample_rate: 16000
+  duration_s: 1.0
+  output_dir: results/generated
+  include_baselines: true

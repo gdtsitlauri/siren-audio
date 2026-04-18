@@ -1,0 +1,116 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\title{SIREN: Stealth Injection and Recognition of Encoded Neural-adversarial Audio}
+\author{\IEEEauthorblockN{Open Source Release Draft}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+SIREN is a unified research framework for adversarial audio generation, training-free audio deepfake detection, spoofing analysis, ultrasonic threat monitoring, and explainable defense orchestration. The release combines six interoperable modules under a single benchmark-oriented interface while preserving a safety boundary that keeps deployment misuse out of scope.
+\end{abstract}
+
+\section{Introduction}
+Audio AI systems are increasingly exposed to both adversarial perturbation threats and synthetic media abuse. Existing open implementations are often fragmented: attack code appears without defensive instrumentation, anti-spoofing baselines are distributed separately from corpus tooling, and paper artifacts are difficult to reproduce from a single workspace. SIREN studies offensive and defensive audio AI robustness under a unified interface while keeping unsafe deployment details out of scope. The framework targets open, reproducible experimentation for adversarial robustness, audio forensics, cross-dataset evaluation, and defense analysis.
+
+\section{Framework Overview}
+The open-source release covers six modules: core adversarial audio research, music-hidden command simulation, training-free voice cloning detection, speaker spoofing simulation, ultrasonic attack analysis, and unified defense orchestration. These modules share common dataset manifests, runtime presets, CLI entry points, and export formats. The intent is to let a researcher move from signal generation to detection, ablation, corpus scoring, and paper artifact creation without switching repositories or inventing ad hoc evaluation glue.
+
+\section{Method}
+The core SIREN-WAVE engine uses a wavelet-inspired decomposition with masking-aware perturbation shaping. The training-free detector combines cepstral, prosodic, phase, timing, and spectral features.
+
+\subsection{SIREN-WAVE}
+SIREN-WAVE operates as a wavelet-inspired perturbation engine with three practical goals: bounded perturbation control, interpretable ablation axes, and compatibility with unified defensive evaluation. Rather than focusing on device-specific attack deployment, the release emphasizes perturbation shaping, reconstruction blending, and comparative benchmarking. This makes the method useful for controlled robustness studies and for consistent measurement against forensic and defensive metrics.
+
+\subsection{Training-Free Forensics}
+The detector estimates synthetic likelihood from cepstral consistency, pitch smoothness, phase coherence, pause structure, spectral flux regularity, and artifact-oriented band statistics. Outputs are explainable and reported per component. This feature-level reporting is intended to support forensic interpretation and not only binary classification. In practical terms, it allows a researcher to inspect why a clip was considered suspicious and which signal families contributed most strongly to the decision.
+
+\subsection{Synthetic Benchmarking Layer}
+When full corpora are unavailable, SIREN provides local synthetic corpus generation, protocol-aware manifests, and proxy baselines for smoke testing and controlled ablations. This layer is especially useful for early-stage development, reproducibility checks, and paper table generation before larger external corpora are available locally.
+
+\subsection{Unified Defense}
+The unified defense layer aggregates training-free forensic scores, ultrasonic risk, music-hidden risk, and replay-like risk into a single explainable report. This report includes both a scalar risk summary and component-level alerts. The same interface is reused in offline benchmarking, sliding-window screening, corpus scoring, and latency measurement.
+
+\section{Experiments}
+Recommended protocol:
+\begin{itemize}
+\item Seeds: 42, 43, 44
+\item Confidence intervals: 95\%
+\item Significance: Wilcoxon signed-rank
+\item Datasets: ASVspoof2019, FakeAVCeleb, LibriSpeech
+\end{itemize}
+
+\subsection{Evaluation Modes}
+SIREN currently supports three evaluation modes:
+\begin{itemize}
+\item synthetic module benchmarking for controlled comparative studies
+\item ablation benchmarking for SIREN-WAVE component analysis
+\item local corpus benchmarking for authentic or labeled external corpora
+\end{itemize}
+
+\subsection{Current Available Corpora}
+The repository is already configured for authentic-speech evaluation through extracted LibriSpeech subsets, while protocol-aware support exists for ASVspoof-style corpora and metadata-aware support exists for FakeAVCeleb-style layouts. This separation is important: infrastructure support does not imply that all target corpora are already locally available or fully benchmarked.
+
+\section{Open-Source Safety Boundary}
+The repository exposes offensive modules only as offline research simulators intended for benchmarking, stress testing, and defense evaluation. Device-targeting playbooks, deployment bypass recipes, and misuse-focused automation are intentionally excluded.
+
+\section{Results}
+Populate from the committed tables under \texttt{results/}. The repository can auto-generate synthetic benchmark and ablation tables via the `research-bundle` workflow, producing LaTeX artifacts suitable for rapid manuscript iteration.
+
+\subsection{Tables}
+Suggested paper tables:
+\begin{itemize}
+\item Synthetic experiment summary
+\item SIREN-WAVE ablation summary
+\item Corpus benchmark AUC/EER comparison
+\item Latency summary for offline and streaming defense
+\end{itemize}
+
+\subsection{Current Repository Snapshot}
+At the current release stage, the repository includes three classes of results artifacts: synthetic experiment summaries, SIREN-WAVE ablation summaries, and authentic-only public-corpus baseline exports from LibriSpeech. The committed synthetic bundle reports mean risk scores of approximately 0.342 for the full SIREN-WAVE configuration and 0.345 for the ultrasonic simulation setting, while the ablation study shows the largest shift when reconstruction blending is removed. The current latency snapshot indicates a streaming defense mean latency below 1\,ms for 20\,ms chunks, which is comfortably within the stated real-time screening target. In addition, the repository contains authentic-only LibriSpeech exports that are useful for false-positive and stability analysis on real speech.
+
+\subsection{Interpretation Boundary}
+The currently committed LibriSpeech artifacts should be interpreted as authentic-speech stability measurements and false-positive sanity checks rather than final deepfake-discrimination evidence, because the evaluated subset contains only authentic speech. Stronger cross-dataset deepfake claims should be attached later to a corpus such as FakeAVCeleb or to an official spoofing benchmark with explicit positive and negative labels.
+
+\subsection{Release Footprint}
+The repository is maintained in a small-footprint release state. Large temporary download archives, caches, and scratch outputs are intentionally excluded after extraction, while committed artifacts focus on reproducible summaries, tables, and the extracted public subset needed for ongoing evaluation.
+
+\section{Discussion}
+The current state of SIREN demonstrates that a substantial portion of adversarial-audio research infrastructure can be made reproducible without waiting for every external dataset to be locally available at all times. The repository already supports unified experiment execution, real authentic-speech sanity checks, latency measurement, ablation reporting, and paper artifact generation. What remains for future work is not primarily framework engineering but external-corpus completion and learned-baseline validation.
+
+\subsection{What Is Complete}
+The repository already provides:
+\begin{itemize}
+\item six-module research coverage
+\item reproducible CLI workflows
+\item training-free forensic analysis
+\item public-corpus authentic-speech benchmarking
+\item ablation and paper-table generation
+\item low-footprint operation for continued development
+\end{itemize}
+
+\subsection{What Remains External}
+The main remaining steps toward stronger empirical claims are:
+\begin{itemize}
+\item labeled deepfake benchmarking on a corpus such as FakeAVCeleb
+\item full official spoofing evaluation on ASVspoof2019
+\item verified learned baseline integrations such as LCNN and RawNet2
+\item final manuscript tables driven by those external corpus results
+\end{itemize}
+
+\section{Reproducibility Checklist}
+\begin{itemize}
+\item Fixed seeds: 42, 43, 44
+\item Committed configs for runtime and dataset-facing presets
+\item Exported CSV, JSON, Markdown, and LaTeX result artifacts
+\item Dataset protocols preserved alongside local corpora
+\item Explicit safety boundary for open-source release
+\end{itemize}
+
+\section{Conclusion}
+SIREN provides a unified and largely complete open-source base for adversarial audio and audio-forensics research. It already supports synthetic module studies, real authentic-speech sanity checks, ablations, latency evaluation, and paper artifact generation inside one repository. The remaining path to stronger empirical claims lies mainly in external labeled data and learned-baseline execution rather than in missing framework infrastructure.
+
+\end{document}

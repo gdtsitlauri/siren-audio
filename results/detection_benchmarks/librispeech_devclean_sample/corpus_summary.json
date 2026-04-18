@@ -1,0 +1,22 @@
+{
+  "training_free": {
+    "auc": 0.0,
+    "eer": 0.30000000000000004,
+    "count": 5.0
+  },
+  "vanilla_baseline": {
+    "auc": 0.0,
+    "eer": 0.30000000000000004,
+    "count": 5.0
+  },
+  "lcnn_proxy": {
+    "auc": 0.0,
+    "eer": 0.30000000000000004,
+    "count": 5.0
+  },
+  "rawnet2_proxy": {
+    "auc": 0.0,
+    "eer": 0.30000000000000004,
+    "count": 5.0
+  }
+}

@@ -1,0 +1,5 @@
+name,auc,eer,count
+training_free,0.0,0.30000000000000004,5.0
+vanilla_baseline,0.0,0.30000000000000004,5.0
+lcnn_proxy,0.0,0.30000000000000004,5.0
+rawnet2_proxy,0.0,0.30000000000000004,5.0

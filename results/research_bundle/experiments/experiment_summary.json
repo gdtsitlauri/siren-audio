@@ -1,0 +1,51 @@
+{
+  "siren_wave": {
+    "mean_risk": 0.34232858578506714,
+    "blocked_rate": 0.0,
+    "ci_low": 0.3420303019890285,
+    "ci_high": 0.3426268695811058,
+    "fully_blocked": false
+  },
+  "music_hidden_command": {
+    "mean_risk": 0.34551571654880325,
+    "blocked_rate": 0.0,
+    "ci_low": 0.3451798460469656,
+    "ci_high": 0.3458515870506409,
+    "fully_blocked": false
+  },
+  "speaker_spoof": {
+    "mean_risk": 0.33772742466353156,
+    "blocked_rate": 0.0,
+    "ci_low": 0.33723796406939166,
+    "ci_high": 0.33821688525767146,
+    "fully_blocked": false
+  },
+  "ultrasonic": {
+    "mean_risk": 0.34543244545665336,
+    "blocked_rate": 0.0,
+    "ci_low": 0.3452055933874034,
+    "ci_high": 0.3456592975259033,
+    "fully_blocked": false
+  },
+  "fgsm_audio": {
+    "mean_risk": 0.3450534121039272,
+    "blocked_rate": 0.0,
+    "ci_low": 0.34482072025384886,
+    "ci_high": 0.34528610395400555,
+    "fully_blocked": false
+  },
+  "cw_audio_proxy": {
+    "mean_risk": 0.3385305642495031,
+    "blocked_rate": 0.0,
+    "ci_low": 0.33824878569749317,
+    "ci_high": 0.33881234280151307,
+    "fully_blocked": false
+  },
+  "replay_baseline": {
+    "mean_risk": 0.329209433501563,
+    "blocked_rate": 0.0,
+    "ci_low": 0.32683522129410897,
+    "ci_high": 0.33158364570901705,
+    "fully_blocked": false
+  }
+}
