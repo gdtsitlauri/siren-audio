@@ -1,9 +1,5 @@
 # SIREN
 
-**Author:** George David Tsitlauri  
-**Affiliation:** Dept. of Informatics & Telecommunications, University of Thessaly, Greece  
-**Contact:** gdtsitlauri@gmail.com  
-**Year:** 2026
 
 SIREN stands for **Stealth Injection and Recognition of Encoded Neural-adversarial audio**. This repository provides a research-oriented, open-source framework for evaluating adversarial audio attacks, training-free audio forensics, spoofing detection, ultrasonic analysis, and unified defense orchestration.
 
@@ -17,6 +13,16 @@ SIREN is designed as a single workspace for:
 - reproducible benchmark and paper-preparation workflows
 
 The repository is intentionally structured as a research system rather than a product. It prioritizes reproducibility, transparency, controlled offline evaluation, and careful result reporting.
+
+
+## Project Metadata
+
+| Field | Value |
+| --- | --- |
+| Author | George David Tsitlauri |
+| Affiliation | Dept. of Informatics & Telecommunications, University of Thessaly, Greece |
+| Contact | gdtsitlauri@gmail.com |
+| Year | 2026 |
 
 ## Scope
 
@@ -357,18 +363,4 @@ It should not be understood as:
 - a stealth deployment toolkit
 - a finished claim of exhaustive real-world benchmark superiority
 
-## License
 
-MIT
-
-## Citation
-
-```bibtex
-@misc{tsitlauri2026siren,
-  author = {George David Tsitlauri},
-  title  = {SIREN: Stealth Injection and Recognition of Encoded Neural-Adversarial Audio},
-  year   = {2026},
-  institution = {University of Thessaly},
-  email  = {gdtsitlauri@gmail.com}
-}
-```
